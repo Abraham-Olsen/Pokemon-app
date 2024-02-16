@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,15 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+div{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  
+}
+.card{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  
 }
