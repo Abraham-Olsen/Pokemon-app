@@ -1,17 +1,25 @@
+.imagen{
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
+}
 .container-app{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    max-width: 900px;
-    /* grid-template-columns: 40% 40% 40%; */
-    margin-left: 3rem;
+    justify-content: center;
+    margin-left: 5%;
     
+    width: 45%;
+    height: 1000px;
+    border: 10px dotted blue;
+    overflow: hidden auto;
 
 }
 input{
   margin-top: 7rem;
   width: 200px;
-  height: 35px;
+  height: 50px;
+  font-size: 25px;
   
 }
 
@@ -21,5 +29,14 @@ input{
   
 }
 .search-box{
-  margin-left: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+  height: 1000px;
+  border: 10px dotted red;
+  margin-right: 5%;
+  /* margin-left: 20rem; */
+  
 }
