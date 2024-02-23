@@ -1,0 +1,30 @@
+.stats{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.statName{
+    width: 75px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.statValue{
+    width: 125px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statBar{
+    width: 200px;
+    height: 10px;
+    border-radius: 10%;
+    background-color: rgb(100, 100, 243);
+    
+}

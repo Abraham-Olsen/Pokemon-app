@@ -2,16 +2,17 @@
   display: flex;
   justify-content: center;
   background: rgba(255, 255, 255, 0.5);
+  height: 75px;
 }
 .container-app{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-left: 5%;
+    /* margin-left: 5%; */
     
-    width: 45%;
+    width: 50%;
     height: 1000px;
-    border: 10px dotted blue;
+    /* border: 10px dotted blue; */
     overflow: hidden auto;
 
 }
@@ -25,7 +26,7 @@ input{
 
 .main{
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   
 }
 .search-box{
@@ -35,7 +36,7 @@ input{
   flex-direction: column;
   width: 50%;
   height: 1000px;
-  border: 10px dotted red;
+  /* border: 10px dotted red; */
   margin-right: 5%;
   /* margin-left: 20rem; */
   

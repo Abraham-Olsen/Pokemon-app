@@ -1,14 +1,16 @@
 .container-poke{
-    border: 10px dotted green;
+    /* border: 10px dotted green; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;    
+    margin: 25px;
     
 }
 
 .card{
-    border: 10px dotted purple;
+    /* border: 10px dotted purple; */
+    
 }
 .img{
     
