@@ -9,7 +9,7 @@ const Stats = ({ nameStat, valueStat }) => {
             <h2>{nameStat}</h2>
           </div>
 
-      <div className="statBar"></div>
+      <div className="statBar" style={{width: valueStat*2}}></div>
 
           <div className="statValue">
             <h2>{valueStat}</h2>

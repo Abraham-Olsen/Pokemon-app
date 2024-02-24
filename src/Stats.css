@@ -1,9 +1,8 @@
 .stats{
     width: 500px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
 }
 
 .statName{
@@ -22,9 +21,8 @@
 }
 
 .statBar{
-    width: 200px;
-    height: 10px;
-    border-radius: 10%;
+    /* width: 200px; */
+    height: 8px;
     background-color: rgb(100, 100, 243);
     
 }

@@ -10,7 +10,7 @@ function App() {
   const [nameStat, setNameStat] = useState([]);
   //const id=0, name="", img="";
   const url = "https://pokeapi.co/api/v2/pokemon?limit=150&offset=0";
-  const search_url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+  
 
   useEffect(() => {
     {/* Obtener 150 pokemons y con el useEffect solo se ejecuta 1 vez*/}
@@ -36,9 +36,9 @@ function App() {
 
 
   {/* Objetener Pokemon por su Nombre */}
-  const getPokemonByName = async () => {
+  const getPokemonByName = async (name) => {
     try {
-
+      const search_url = `https://pokeapi.co/api/v2/pokemon/${pokemonName !== '' ? pokemonName : name}`;
       const resp = await fetch(search_url);
       const data = await resp.json();
       const img = data.sprites.front_default;
@@ -47,7 +47,7 @@ function App() {
       setNameStat(nameStat);
       setImg(img);
       setSearched(data);
-
+      
     } catch (error) {
 
       setImg("");
@@ -75,6 +75,8 @@ function App() {
 
 
 
+  
+
   return (
     <>
 
@@ -94,14 +96,27 @@ function App() {
 
             {/* Seccion de Mostrar 150 Pokemons */}
         <div className="container-app">
+
           {poke.map((poke) => (
-            <Poke
-              key={poke.id}
+          <div key={poke.id}  
+
+
+          onClick={()=>{            
+          getPokemonByName(poke.name)
+          } }>
+            
+
+
+          <Poke
+              
               id={poke.id}
               name={poke.name}
               img={poke.img}
+            
             ></Poke>
+            </div>
           ))}
+
         </div>
 
 
@@ -149,7 +164,7 @@ function App() {
               {nameStat.map((data) => {
                return(
                 
-                <div key={data.stat.name+"1"}>
+                <div  key={data.stat.name+"1"}>
                   {img ? (
                    <Stats nameStat={data.stat.name} valueStat={data.base_stat}> </Stats>
                    ) : (<div></div>)}
